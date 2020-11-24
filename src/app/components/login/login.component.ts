@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     };
 
 
-    var res = this.httpclient.post<any>('http://localhost:5000/ifx/v1.1/security/tokens',null,httpOptions)
+    this.httpclient.post<any>('http://localhost:5000/ifx/v1.1/security/tokens',null,httpOptions)
     .subscribe(p => 
       {
         console.log(p.AccessToken)

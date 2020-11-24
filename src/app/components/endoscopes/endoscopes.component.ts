@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-endoscopes',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EndoscopesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpClient : HttpClient) { }
 
   ngOnInit(): void {
+    var asd = this.httpClient.get('http://localhost:5000/ifx/v1.1/display/endoscopes')
+    .subscribe(val => 
+      {
+        console.log(val)
+      }, 
+      err => {
+
+      });
+   
   }
 
 }
