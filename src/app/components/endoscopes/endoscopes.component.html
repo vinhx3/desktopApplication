@@ -1,1 +1,27 @@
-<p>endoscopes works!</p>
+<div class="heddaz">
+    <button (click)="logoutClick()" mat-raised-button> Logout</button>
+</div>
+
+<div class="vinh-table">
+    <h1>Endoscopes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Serialnumber</th>
+                <th>Type</th>
+                <th>Manufacturer</th>
+                <th>IsEnabled</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of dataSource">
+                <th>{{ item.ID}}</th>
+                <td>{{ item.SerialNumber }}</td>
+                <td>{{ item.TypeName }}</td>
+                <td>{{ item.Manufacturer }}</td>
+                <td>{{ item.IsEnabled }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

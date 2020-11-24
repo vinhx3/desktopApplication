@@ -3,13 +3,13 @@
         <mat-toolbar class="shadow-small" color="primary">Hytrack Login</mat-toolbar>
       <form>
         <mat-form-field>
-            <input matInput placeholder="Username">
+            <input #username matInput placeholder="Username">
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="password" placeholder="Password">
+            <input #password matInput type="password" placeholder="Password">
         </mat-form-field>
         <mat-card-actions>
-            <button type='button' (click)="onLoginClick()" color="primary" mat-raised-button >Login</button>
+            <button type='button' (click)="onLoginClick(username.value,password.value)" color="primary" mat-raised-button >Login</button>
         </mat-card-actions>
       </form>
     </mat-card>

@@ -16,12 +16,13 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onLoginClick():void{
+  onLoginClick(username: string, password:string):void{
 
+    var usercerendials = username +':'+ password;
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
-        'Authorization': "Basic " + btoa('eb:eb')
+        'Authorization': "Basic " + btoa(usercerendials)
       })
     };
 

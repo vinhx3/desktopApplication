@@ -13,6 +13,8 @@ import { MatCardModule } from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { EndoscopesComponent } from './components/endoscopes/endoscopes.component';
 import { JwtInterceptor } from './interceptor/jwt-interceptor'
+import {MatTableModule} from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { JwtInterceptor } from './interceptor/jwt-interceptor'
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   providers: 
   [
