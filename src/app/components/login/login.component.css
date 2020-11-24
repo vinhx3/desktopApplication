@@ -1,0 +1,16 @@
+.block
+{
+    border: 1px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 8px 5px #888888;
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+    
+}
+
+.shadow-small
+{
+    box-shadow: 5px 6px 5px 2px #888888;
+    margin-bottom: 1rem;
+}
