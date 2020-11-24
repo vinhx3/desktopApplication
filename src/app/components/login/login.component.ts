@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { TokenstoreService } from '../../tokenstore.service';
+import { TokenstoreService } from '../../services/tokenstore.service';
 
 @Component({
   selector: 'app-login',
@@ -30,10 +30,8 @@ export class LoginComponent implements OnInit {
     this.httpclient.post<any>('http://localhost:5000/ifx/v1.1/security/tokens',null,httpOptions)
     .subscribe(p => 
       {
-        console.log(p.AccessToken)
-        this.router.navigate(['endoscopes-app']);
-
         this.tokenStore.setToken(p.AccessToken);
+        this.router.navigate(['endoscopes-app']);      
       }, 
       err =>  
       {

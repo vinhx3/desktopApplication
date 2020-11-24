@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Endoscope } from '../../models/endoscope'
-import {TokenstoreService} from '../../tokenstore.service'
+import {TokenstoreService} from '../../services/tokenstore.service'
 
 @Component({
   selector: 'app-endoscopes',

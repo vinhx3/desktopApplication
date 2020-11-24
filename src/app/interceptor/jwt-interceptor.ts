@@ -3,7 +3,7 @@ import {
   HttpEvent, HttpInterceptor, HttpHeaders, HttpHandler, HttpRequest
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {TokenstoreService} from '../tokenstore.service'
+import {TokenstoreService} from '../services/tokenstore.service'
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,7 @@ export class JwtInterceptor implements HttpInterceptor {
         'Authorization': 'Bearer '+ this.tokenService.getToken()
       })
     });
-    
+
     console.log(req.headers);
       return next.handle(authReq);
   }
