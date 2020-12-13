@@ -1,0 +1,35 @@
+<div class="heddaz">
+    <button (click)="logoutClick()" mat-raised-button> Logout</button>
+</div>
+
+<div class="vinh-table">
+    <h1>Logbook</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Timestamp</th>
+                <th>LogbookCategory</th>
+                <th>ObjectType</th>
+                <th>User</th>
+                <th>ToBeConfirmed</th>
+                <th>AffectedDevices</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of dataSource">
+                <th>{{ item.ID}}</th>
+                <td>{{ item.Timestamp}}</td>
+                <td>{{ item.LogbookCategory}}</td>
+                <td>{{ item.ObjectType}}</td>
+                <!-- <td>
+                    item.user?
+                </td> -->
+                <td *ngIf="item.User && item.User.Id"> item.Timestamp </td>
+                <td>{{ item.ToBeConfirmed }}</td>
+                <td>{{ item.AffectedDevices }}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

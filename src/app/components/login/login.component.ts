@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     .subscribe(p => 
       {
         this.tokenStore.setToken(p.AccessToken);
-        this.router.navigate(['endoscopes-app']);      
+        this.router.navigate(['dashboard-app']);      
       }, 
       err =>  
       {

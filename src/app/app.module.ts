@@ -14,12 +14,16 @@ import { MatToolbarModule} from '@angular/material/toolbar';
 import { EndoscopesComponent } from './components/endoscopes/endoscopes.component';
 import { JwtInterceptor } from './interceptor/jwt-interceptor'
 import { MatTableModule} from '@angular/material/table';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LogbookComponent } from './components/logbook/logbook.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    EndoscopesComponent
+    EndoscopesComponent,
+    DashboardComponent,
+    LogbookComponent
   ],
   imports: [
     BrowserModule,
