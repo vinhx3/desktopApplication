@@ -22,10 +22,8 @@
                 <td>{{ item.Timestamp}}</td>
                 <td>{{ item.LogbookCategory}}</td>
                 <td>{{ item.ObjectType}}</td>
-                <!-- <td>
-                    item.user?
-                </td> -->
-                <td *ngIf="item.User && item.User.Id"> item.Timestamp </td>
+                <td *ngIf="!item.User"> No User Information </td>
+                <td *ngIf="item.User"> {{item.User.Firstname}} </td>
                 <td>{{ item.ToBeConfirmed }}</td>
                 <td>{{ item.AffectedDevices }}</td>
                 
